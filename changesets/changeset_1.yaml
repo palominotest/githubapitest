@@ -1,0 +1,21 @@
+changeset:
+    database_schema: test_schema_1
+    type: 'DDL:Table:Create'
+    classification: painless
+    submitted_by: mr_developer
+    submittted_at: 2013-05-01 02:05:40+08:00
+
+changeset_details:
+    - type: add
+      description: create 1000th table
+      apply_sql: "create table `table_1000`(\nid int\n)"
+      revert_sql: "drop table `table_1000`"
+      count_sql:
+      volumetric_values:
+
+    - type: add
+      description: create 2000th table
+      apply_sql: "create table `table_2000`(\nid int\n)"
+      revert_sql: "drop table `table_2000`"
+      count_sql:
+      volumetric_values:

@@ -1,0 +1,18 @@
+changeset:
+    database_schema: schemanizer_test_2
+    type: 'DDL:Table:Create'
+    classification: painless
+    submitted_by: dev
+
+changeset_details:
+    - type: add
+      description: create table people
+      apply_sql: "create table people (id int primary key auto_increment, name varchar(255), team varchar(255))"
+      revert_sql: "drop table people"
+      count_sql:
+
+    - type: inst
+      description: insert people rows
+      apply_sql: "insert into people values (1, 'moss', 'tools'), (2, 'rod', 'tools')"
+      revert_sql: "delete from people where id in (1, 2)"
+      count_sql: "select count(*) from people where id in (1, 2); select count(*) from people where id in (1,2) and team='tools';"

@@ -1,0 +1,17 @@
+changeset:
+    database_schema: schemanizer_test_1
+    type: 'DDL:Table:Create'
+    classification: painless
+    submitted_by: dev
+
+changeset_details:
+    - description: create table t06172144
+      apply_sql: "create table t06172144 (id int primary key auto_increment, name varchar(255), team varchar(255))"
+      revert_sql: "drop table t06172144"
+      apply_verification_sql:
+      revert_verification_sql:
+
+    - description: insert people t06172144
+      apply_sql: "insert into t06172144 values (1, 'moss', 'tools'), (2, 'rod', 'tools')"
+      revert_sql: "delete from t06172144 where id in (1, 2)"
+

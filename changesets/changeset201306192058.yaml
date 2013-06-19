@@ -1,0 +1,21 @@
+changeset:
+    database_schema: schemanizer_test_1
+    type: 'DDL:Table:Create'
+    classification: painless
+    submitted_by: dev
+
+changeset_details:
+    - description: create t06192059 table
+      apply_sql: "create table t06192059 (id int primary key auto_increment, name varchar(255), team varchar(255))"
+      revert_sql: "drop table t06192059"
+      apply_verification_sql:
+      revert_verification_sql:
+
+    - description: insert t06192059 rows
+      apply_sql: "insert into t06192059 values (1, 'moss', 'tools'), (2, 'rod', 'tools'), (3, 'jay', 'tools')"
+      revert_sql: "delete from t06192059 where id in (1, 2, 3)"
+
+    - description: create t06192059b table
+      apply_sql: "create table t06192059b (id int primary key auto_increment);"
+      revert_sql: "drop table t06192059b"
+

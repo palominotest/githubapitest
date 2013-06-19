@@ -5,7 +5,7 @@ changeset:
     submitted_by: dev
 
 changeset_details:
-    - description: create t06192059 table
+    - description: create t06192059 table (new desc)
       apply_sql: "create table t06192059 (id int primary key auto_increment, name varchar(255), team varchar(255))"
       revert_sql: "drop table t06192059"
       apply_verification_sql:

@@ -1,0 +1,12 @@
+changeset:
+    database_schema: schemanizer_test_1
+    type: 'DDL:Table:Create'
+    classification: painless
+    review_version: 1
+    submitted_by: dev
+
+changeset_details:
+    - description: create table def
+      apply_sql: "create table def (id int) engine=InnoDB default charset=utf8"
+      revert_sql: "drop table def"
+

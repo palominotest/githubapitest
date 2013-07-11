@@ -1,12 +1,12 @@
-achangeset:
-    adatabase_schema: schemanizer_test_1
+changeset:
+    database_schema: schemanizer_test_1
     atype: 'DDL:Table:Create'
     classification: painless
     review_version: 1
     submitted_by: dev
 
-achangeset_details:
-    - description: create table def
-      apply_sql: "create table def (id int) engine=InnoDB default charset=utf8"
-      revert_sql: "drop table def"
+changeset_details:
+    - description: create table ghi
+      apply_sql: "create table ghi (id int) engine=InnoDB default charset=utf8"
+      revert_sql: "drop table ghi"
 
